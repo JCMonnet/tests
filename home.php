@@ -14,6 +14,7 @@
             <i><?php echo displayAuthor($recipe['author'], $users); ?></i>
         </article>
     <?php endforeach ?> -->
+    <!-- variable $recipes qui pointe vers dbeaver, table recipe, et query pour lancer la requete "ttes les recettes" -->
    <?php $recipes = $mysqlConnection -> query('SELECT * from recipes');?>
    <?php foreach ($recipes as $recipe) : ?>
         <article>
@@ -22,6 +23,19 @@
             <i><?php echo displayAuthor($recipe['author'], $users); ?></i>
         </article>
         <?php endforeach ?>
+
+        <!-- pour les users -->
+        <?php $users = $mysqlConnection -> query('SELECT * from users limit 1');?>
+   <?php foreach ($users as $user) : ?>
+    <!-- juste pour vérifier si ça s'affiche bien -->
+        <article>
+            <h3><?php echo $user['full_name']; ?></h3>
+            <div><?php echo $user['email']; ?></div>
+            <div><?php echo $user['password']; ?></div>
+            <div><?php echo $user['age']; ?></div>
+        </article>
+        <?php endforeach ?>
+
 <?php endif; ?>
 </div>
 <?php
