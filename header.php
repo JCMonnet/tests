@@ -17,7 +17,6 @@
 
   <!-- Navigation -->
   <div class="container">
-    <h1>Site de Recettes !</h1>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.php">Site de recettes</a>
@@ -26,22 +25,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-            <?php
-            // N'affiche le lien que si ce n'est pas la page active
-            if (getLocation() !== '/home.php') {
-
-              echo ' <li class="nav-item"> <a class="nav-link" href="home.php">Home</a>  </li>';
-            } ?>
-
-
-            <?php
-            // N'affiche le lien que si ce n'est pas la page active
-            if (getLocation() !== '/contact.php') {
-
-              echo '  <li class="nav-item"> <a class="nav-link" href="contact.php">Contact</a>  </li>';
-            } ?>
-
+            <li class="nav-item"> <a class="nav-link" href="home.php">Home</a>  </li>';
+            <li class="nav-item"> <a class="nav-link" href="contact.php">Contact</a>  </li>';
             <li class="nav-item">
               <a class="nav-link" href="deconnexion.php">Se déconnecter</a>
             </li>
@@ -49,8 +34,4 @@
         </div>
       </div>
     </nav>
-    <?php if (isset($_SESSION['LOGGED_USER'])) {
-
-      echo $_SESSION['LOGGED_USER'];
-    }
-    ?>
+   

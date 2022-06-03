@@ -35,9 +35,3 @@ function getRecipes(array $recipes) : array
     return $validRecipes;
 }
 
-// Fonction qui retourne l'url de la page active
-function getLocation(){
-$url = $_SERVER['REQUEST_URI'];
-return $url;
-
-}

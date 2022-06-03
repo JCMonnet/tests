@@ -19,9 +19,7 @@ if (isset($_POST['email']) &&  isset($_POST['password'])) {
 }
 ?>
 
-<!--
-   Si utilisateur/trice est non identifié(e), on affiche le formulaire
--->
+<!-- Si utilisateur/trice est non identifié(e), on affiche le formulaire-->
 <?php if (!isset($_SESSION['LOGGED_USER'])) : ?>
     <form action="home.php" method="post">
         <!-- si message d'erreur on l'affiche -->
@@ -56,7 +54,7 @@ setcookie(
     'LOGGED_USER',
     'mickael.andrieu@exemple.com',
     [
-        'expires' => time() + 365*24*3600,
+        'expires' => time() + 365 * 24 * 3600,
         'secure' => true,
         'httponly' => true,
     ]
