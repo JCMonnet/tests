@@ -1,7 +1,6 @@
-<?php session_start();?>
 <?php include_once('header.php'); ?>
         <h1>Votre recette</h1>
-        <form action="<?php echo ('recipes/post_create.php');?>" method="POST">
+        <form action="post_create.php" method="POST">
             <div class="mb-3">
                 <label for="title" class="form-label">Titre de la recette</label>
                 <input type="text" class="form-control" id="title" name="title">

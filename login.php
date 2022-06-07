@@ -48,14 +48,3 @@ if (isset($_POST['email']) &&  isset($_POST['password'])) {
     </div>
 <?php endif; ?>
 
-<!-- création cookie où on retient mail du visiteurnpendant 1 an -->
-<?php
-setcookie(
-    'LOGGED_USER',
-    'mickael.andrieu@exemple.com',
-    [
-        'expires' => time() + 365 * 24 * 3600,
-        'secure' => true,
-        'httponly' => true,
-    ]
-);
