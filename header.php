@@ -28,9 +28,11 @@
             <li class="nav-item"> <a class="nav-link" href="home.php">Home</a>  </li>
             <li class="nav-item"> <a class="nav-link" href="contact.php">Contact</a>  </li>
             <li class="nav-item">
-              <a class="nav-link" href="deconnexion.php">Se déconnecter</a>
-            </li>
             <li class="nav-item"> <a class="nav-link" href="create.php">Ajouter une recette</a>  </li>
+            <li class="nav-item"> <a class="nav-link" href="edition.php">Modifier une recette</a>  </li>
+            <li class="nav-item"> <a class="nav-link" href="suppression.php">Supprimer une recette</a>  </li>
+            <a class="nav-link" href="deconnexion.php">Se déconnecter</a>
+            </li>
           </ul>
         </div>
       </div>
